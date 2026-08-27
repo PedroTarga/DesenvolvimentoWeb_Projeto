@@ -1,0 +1,85 @@
+
+:root {
+    --text-gray: #9aa3bd;
+    --color-primary: #000;
+    --bg-gray: #f5f5f5;
+    --bg-white: #fff;
+    --bg--header: #7925ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Zen Dots", sans-serif;
+}
+.header-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #7925ff;
+    .logo {
+        height: 60px;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        list-style: none;
+            .item {
+                .link {
+                    text-decoration: none;
+                    color: var(--color-primary);
+                        &:hover {
+                            color: var(--text-gray);
+                        }
+                        &.active {
+                            color: var(--text-gray);
+                        }
+                }
+            .call-to-action {
+                background-color: var(--color-primary);
+                color: var(--text-gray);
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+                    &:hover {
+                        background-color: var(--text-gray);
+                        color: var(--color-primary);
+                    }
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                    i {
+                        margin-right: 5px;
+                    }    
+            }
+           }
+
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--bg-gray);
+            .search {
+                width: 500px;
+                height: 50px;
+                border-radius: 5px;
+                background-color: var(--bg-gray);
+                padding: 10px;
+                font-size: 1rem;
+                border: none;
+                outline: none;
+                transition: all 0.3s ease-in-out;
+                    &:focus {
+                        background-color: var(--bg--header);
+                    }
+            }
+        }
+    }
